@@ -21,8 +21,6 @@ import { setUserState } from "../redux/action";
 import { useHistory } from "react-router";
 
 
-
-
 const Login: React.FC = () => {
   const history = useHistory()
   const [loading, setLoading] = useState(false)
@@ -45,10 +43,10 @@ const Login: React.FC = () => {
   };
 
   return (
-    <IonPage>
+    <IonPage style={{display:"flex"}}>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Login SCREEN</IonTitle>
+          <IonTitle style={{textAlign:"center"}}>Login SCREEN</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonLoading message="Loading..." duration={0} isOpen={loading} />
