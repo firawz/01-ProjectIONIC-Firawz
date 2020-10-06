@@ -30,11 +30,12 @@ const Register: React.FC = () => {
     if (email.trim() === "" || password.trim() === "") {
       return toast("Email or Password required", 4000);
     }
-
+    // Masukin Try Catch
     const result = await registerUser(email, password);
 
     if (result) {
       toast("Registration success!");
+      // return aja gausah return true
       return true;
     }
     setLoading(false);
