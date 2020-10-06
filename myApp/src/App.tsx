@@ -70,11 +70,10 @@ const App: React.FC = () => {
       if (user) {
         dispatch(setUserState(user.email));
         window.history.replaceState({}, "", "/dashboard");
-        setLoading(false);
       } else {
         window.history.replaceState({}, "", "/home");
-        setLoading(false)
       }
+      setIsLoading(false)
     });
   }, []);
 
