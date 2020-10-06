@@ -16,7 +16,11 @@ import { useHistory } from "react-router";
 const MainScreen: React.FC = () => {
   const username = useSelector((state: any) => state.user.email);
   const history = useHistory()
+  
+  // Ini Gakepake
   const [loading, setLoading] = useState()
+  
+  
   async function logout(){
     await logoutUser()
     history.replace('/login')
