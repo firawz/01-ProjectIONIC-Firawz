@@ -32,16 +32,17 @@ const Login: React.FC = () => {
 
   const userLogin = async () => {
     setLoading(true)
-    const result : any = await loginUser(email, password);
-    if (result) {
+    try {
+     const result : any = await loginUser(email, password);
       dispatch(setUserState(result.user.email))
       history.replace('/dashboard')
       toast("Login Success");
-    } else {
+    } catch(error) {
+      // Handle Error
       toast("Invalid email or password");
+    } finally {
+      setIsLoading(false);
     }
-    setLoading(false)
-    console.log(`${result ? "Login Success" : "Login Failed"}`);
   };
 
   return (
