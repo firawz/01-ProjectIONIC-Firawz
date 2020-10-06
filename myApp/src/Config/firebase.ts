@@ -25,31 +25,23 @@ export function getCurrentUser(){
             }
             userLogedIn()
         })
-
     })
 }
 
 export async function loginUser(email: string, password: string) {
-
     try {
         const result = await firebase.auth().signInWithEmailAndPassword(email,password)
-    
-        console.log(result)
         return result
     } catch (err) {
-        console.log(err)
         return false
     }
 }
 
 export async function registerUser(email: string, password: string) {
-
     try {
-        const result = await firebase.auth().createUserWithEmailAndPassword(email,password)
-        console.log(result)
+        await firebase.auth().createUserWithEmailAndPassword(email,password)
         return true
     } catch (err) {
-        console.log(err)
         if(err.message === "The email address is badly formatted."){
             toast("Invalid email format", 4000)
         }else{

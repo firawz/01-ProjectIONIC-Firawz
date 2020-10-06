@@ -12,7 +12,6 @@ import {
   IonGrid,
   IonRow,
   IonCol,
-  IonModal,
   IonLoading,
 } from "@ionic/react";
 import { toast } from "../toast";
@@ -37,6 +36,7 @@ const Register: React.FC = () => {
       toast("Registration success!");
       return true;
     }
+    
     setLoading(false);
   };
 
