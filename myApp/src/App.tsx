@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/01-Login";
 import Register from "./pages/02-register";
 import MainScreen from "./pages/03-MainScreen";
-
+import MainPage from './pages/00-MainPage'
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -52,11 +52,12 @@ const Routes: React.FC = () => {
   return (
     <IonReactRouter>
       <IonRouterOutlet>
+        <Route path="/mainpage" component={MainPage} exact={true} />
         <Route path="/home" component={Home} exact={true} />
         <Route path="/login" component={Login} exact={true} />
         <Route path="/register" component={Register} exact={true} />
         <Route path="/dashboard" component={MainScreen} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/home" />} />
+        <Route exact path="/" render={() => <Redirect to="/" />} />
       </IonRouterOutlet>
     </IonReactRouter>
   );
@@ -78,7 +79,7 @@ const App: React.FC = () => {
     });
   }, []);
 
-  return <IonApp> {loading ? <IonSpinner /> : <Routes />} </IonApp>;
+  return <IonApp> {loading ? <IonSpinner style={{justifyContent:"center", alignItems: "center"}} /> : <Routes />} </IonApp>;
 };
 
 export default App;

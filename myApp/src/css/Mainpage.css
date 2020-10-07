@@ -1,0 +1,63 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ion-toolbar{
+    text-align: center;
+    color:  white;
+    font-weight: 600;
+    --font-size: large;
+    --ion-toolbar-background:#395C6B; 
+}
+
+ion-content.background{
+    --background: url('../asset/crop\ \(1\).jpg') no-repeat center center fixed;
+    --position: relative;
+    --display: flex
+}
+ion-text{
+    color: white;
+}
+
+ion-button.btn{
+    --border-radius: 50px;
+}
+
+.btn{
+    color: White;
+    border-color: blue;
+}
+
+.btn:hover{
+    --border-color: white;
+}
+
+.mainPageText{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    color: black;
+    --background:white
+}
+
+.btn1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%, -50%);
+    border-radius: 20px;
+    color: white;
+    --border-color: white;
+}
+
+.btn2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, -50%);
+    border-radius: 20px;
+    color: white;
+    --border-color: white
+}

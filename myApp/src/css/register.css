@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ion-content.background{
+    --background: url('../asset/crop\ \(1\).jpg') no-repeat center center fixed;
+    --position: relative;
+    --display: flex
+}
+
+.backToMainPage{
+    position: absolute;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    --background: #f5f6f9    ;
+    --ion-border-color:white;
+    color: #0D0221;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+.card{
+    display: flex;
+    position: relative;
+    width: 80%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #2D0774;
+}
+
+.text{
+    text-align: center;
+}
+
+.register{
+    position: absolute;
+    margin: 20px;
+    border-radius: 20;
+    --background: #ed576b;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+}

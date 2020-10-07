@@ -1,0 +1,13 @@
+ion-content.home{
+    --background: url('../asset//e9270a01c666b6a015b547ad3e3051ce.jpg') no-repeat center center fixed;
+    --background-size: cover;
+}
+
+ion-button.home{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

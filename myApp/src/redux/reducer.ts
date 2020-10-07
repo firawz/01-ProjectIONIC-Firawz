@@ -1,5 +1,6 @@
 const initialState = {
-     user: {}
+     user: {},
+     games: []
 }
 
 export default function reducer(state = initialState,
@@ -8,11 +9,7 @@ export default function reducer(state = initialState,
      : any {
      switch (type) {
           case 'SET_USER_STATE':
-               return {
-                    ...state, user: {
-                         email: payload.split('@')[0]
-                    }
-               }
+               return {...state, user: {email: payload.split('@')[0]}}
      }
      return state
 }
